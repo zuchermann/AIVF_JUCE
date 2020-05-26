@@ -1,0 +1,2 @@
+rootProject.name = 'AIVF_app'
+include ':app'

@@ -1,0 +1,1 @@
+/Users/owner/Library/Developer/Xcode/DerivedData/AIVF_app-githzgjorgcvpcdnkrosffngkhmg/Build/Intermediates.noindex/ArchiveIntermediates/AIVF_app - App/InstallationBuildProductsLocation/Users/owner/Applications/AIVF_app.app

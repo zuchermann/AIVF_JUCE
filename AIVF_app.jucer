@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="CSTIn6" name="AIVF_app" projectType="guiapp" jucerVersion="5.4.7">
+  <MAINGROUP id="YIDkCi" name="AIVF_app">
+    <GROUP id="{6422783E-31DE-8F25-BD20-1050D00C397F}" name="sample_vids">
+      <FILE id="uO56ue" name="embryo_1996.mp4" compile="0" resource="0" file="../AIVF_Sonification/Local stuff/small_selection/embryo_1996.mp4"
+            xcodeResource="1"/>
+      <FILE id="DtrE5D" name="embryo_7651.mp4" compile="0" resource="0" file="../AIVF_Sonification/Local stuff/small_selection/embryo_7651.mp4"
+            xcodeResource="1"/>
+      <FILE id="PPdpNN" name="embryo_7883.mp4" compile="0" resource="0" file="../AIVF_Sonification/Local stuff/small_selection/embryo_7883.mp4"
+            xcodeResource="1"/>
+      <FILE id="mHlJkt" name="embryo_11858.mp4" compile="0" resource="0"
+            file="../AIVF_Sonification/Local stuff/small_selection/embryo_11858.mp4"
+            xcodeResource="1"/>
+      <FILE id="DoX5Un" name="embryo_17174.mp4" compile="0" resource="0"
+            file="../AIVF_Sonification/Local stuff/small_selection/embryo_17174.mp4"
+            xcodeResource="1"/>
+      <FILE id="rdDZJ4" name="embryo_20237.mp4" compile="0" resource="0"
+            file="../AIVF_Sonification/Local stuff/small_selection/embryo_20237.mp4"
+            xcodeResource="1"/>
+      <FILE id="nz4sEO" name="embryo_20519.mp4" compile="0" resource="0"
+            file="../AIVF_Sonification/Local stuff/small_selection/embryo_20519.mp4"
+            xcodeResource="1"/>
+      <FILE id="o8ESlb" name="embryo_35386.mp4" compile="0" resource="0"
+            file="../AIVF_Sonification/Local stuff/small_selection/embryo_35386.mp4"
+            xcodeResource="1"/>
+      <FILE id="EcIec6" name="embryo_36888.mp4" compile="0" resource="0"
+            file="../AIVF_Sonification/Local stuff/small_selection/embryo_36888.mp4"
+            xcodeResource="1"/>
+      <FILE id="viaX0a" name="embryo_45028.mp4" compile="0" resource="0"
+            file="../AIVF_Sonification/Local stuff/small_selection/embryo_45028.mp4"
+            xcodeResource="1"/>
+    </GROUP>
+    <GROUP id="{E2ACF4AA-CB25-330C-FF55-271D9BAE75A6}" name="data1">
+      <FILE id="Ty0EL7" name="final_annotations_files.csv" compile="0" resource="0"
+            file="../AIVF_Sonification/Local stuff/data_1/final_annotations_files.csv"
+            xcodeResource="1"/>
+    </GROUP>
+    <GROUP id="{7FA63463-82A9-261C-54B6-ECE85712C66D}" name="perc1Samples">
+      <FILE id="NjDVOO" name="bass1_bip.aif" compile="0" resource="0" file="../AIVF_Sonification/aivf_sonification_dev/dev/perc_sounds1/bass1_bip.aif"
+            xcodeResource="1"/>
+      <FILE id="Pxjj2N" name="bass2_bip.aif" compile="0" resource="0" file="../AIVF_Sonification/aivf_sonification_dev/dev/perc_sounds1/bass2_bip.aif"
+            xcodeResource="1"/>
+      <FILE id="JGd9bd" name="hand_drum1_bip.aif" compile="0" resource="0"
+            file="../AIVF_Sonification/aivf_sonification_dev/dev/perc_sounds1/hand_drum1_bip.aif"
+            xcodeResource="1"/>
+      <FILE id="n9CvCM" name="hand_drum2_bip.aif" compile="0" resource="0"
+            file="../AIVF_Sonification/aivf_sonification_dev/dev/perc_sounds1/hand_drum2_bip.aif"
+            xcodeResource="1"/>
+      <FILE id="qt3Lyz" name="hand_drum3_bip.aif" compile="0" resource="0"
+            file="../AIVF_Sonification/aivf_sonification_dev/dev/perc_sounds1/hand_drum3_bip.aif"
+            xcodeResource="1"/>
+      <FILE id="EEOyJh" name="hand_drum4_bip.aif" compile="0" resource="0"
+            file="../AIVF_Sonification/aivf_sonification_dev/dev/perc_sounds1/hand_drum4_bip.aif"
+            xcodeResource="1"/>
+      <FILE id="O25B8u" name="shake_bip.aif" compile="0" resource="0" file="../AIVF_Sonification/aivf_sonification_dev/dev/perc_sounds1/shake_bip.aif"
+            xcodeResource="1"/>
+      <FILE id="Q1HdJm" name="triangle_bip.aif" compile="0" resource="0"
+            file="../AIVF_Sonification/aivf_sonification_dev/dev/perc_sounds1/triangle_bip.aif"
+            xcodeResource="1"/>
+    </GROUP>
+    <GROUP id="{89A32700-2399-7546-ECAB-6700D8E4DBC2}" name="Source">
+      <FILE id="nM1kd9" name="CSVLoader.cpp" compile="1" resource="0" file="Source/CSVLoader.cpp"/>
+      <FILE id="i0NO2V" name="CSVLoader.h" compile="0" resource="0" file="Source/CSVLoader.h"/>
+      <FILE id="HDhAv4" name="FileUtilities.cpp" compile="1" resource="0"
+            file="Source/FileUtilities.cpp"/>
+      <FILE id="fukUZH" name="FileUtilities.h" compile="0" resource="0" file="Source/FileUtilities.h"/>
+      <FILE id="lucLKH" name="GUI.cpp" compile="1" resource="0" file="Source/GUI.cpp"/>
+      <FILE id="sdM0r4" name="GUI.h" compile="0" resource="0" file="Source/GUI.h"/>
+      <FILE id="z2SrpA" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="sk3C8L" name="Perc0Sampler.cpp" compile="1" resource="0"
+            file="Source/Perc0Sampler.cpp"/>
+      <FILE id="oQpvih" name="Perc0Sampler.h" compile="0" resource="0" file="Source/Perc0Sampler.h"/>
+      <FILE id="J7NoZq" name="SonificationScheduler.cpp" compile="1" resource="0"
+            file="Source/SonificationScheduler.cpp"/>
+      <FILE id="BXGOB1" name="SonificationScheduler.h" compile="0" resource="0"
+            file="Source/SonificationScheduler.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_IPHONE targetFolder="Builds/iOS" iosContentSharing="0" iosScreenOrientation="portrait"
+                  iPadScreenOrientation="portrait" bundleIdentifier="com.yn.aivfsonification"
+                  iosDevelopmentTeamID="3DGHFZ7NDD">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../Applications/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_IPHONE>
+    <ANDROIDSTUDIO targetFolder="Builds/Android">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../Applications/JUCE/modules"/>
+      </MODULEPATHS>
+    </ANDROIDSTUDIO>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+</JUCERPROJECT>

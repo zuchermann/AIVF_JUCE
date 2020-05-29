@@ -18,6 +18,7 @@ public:
     Perc0Sampler();
     ~Perc0Sampler();
     void playSample(int sample_index);
+    AudioSourcePlayer* getSource();
     
     const static int KICK1 = 0;
     const static int KICK2 = 1;
@@ -30,7 +31,6 @@ public:
     const static std::vector<String> FILE_NAMES;
 
 private:
-    AudioDeviceManager audioDeviceManager;
     AudioFormatManager formatManager;
     AudioSourcePlayer audioSourcePlayer;
     AudioTransportSource transportSource;

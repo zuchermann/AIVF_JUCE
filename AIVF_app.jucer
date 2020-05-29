@@ -65,6 +65,9 @@
       <FILE id="HDhAv4" name="FileUtilities.cpp" compile="1" resource="0"
             file="Source/FileUtilities.cpp"/>
       <FILE id="fukUZH" name="FileUtilities.h" compile="0" resource="0" file="Source/FileUtilities.h"/>
+      <FILE id="NFQ8kq" name="FilterSynth1.cpp" compile="1" resource="0"
+            file="Source/FilterSynth1.cpp"/>
+      <FILE id="PdgwIZ" name="FilterSynth1.h" compile="0" resource="0" file="Source/FilterSynth1.h"/>
       <FILE id="lucLKH" name="GUI.cpp" compile="1" resource="0" file="Source/GUI.cpp"/>
       <FILE id="sdM0r4" name="GUI.h" compile="0" resource="0" file="Source/GUI.h"/>
       <FILE id="z2SrpA" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>

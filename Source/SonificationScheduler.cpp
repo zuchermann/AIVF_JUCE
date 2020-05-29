@@ -9,11 +9,18 @@
 */
 
 #include "Perc0Sampler.h"
+#include "FilterSynth1.h"
 #include "CSVLoader.h"
 #include "SonificationScheduler.h"
 #include "FileUtilities.h"
 
-SonificationScheduler::SonificationScheduler() {
+SonificationScheduler::SonificationScheduler(){
+    audioDevice.initialise(0, 2, nullptr, true);
+    
+    //add all the sources
+    audioDevice.addAudioCallback (sampler.getSource());
+    audioDevice.addAudioCallback (filterSynth.getSource());
+    
     frame = 0;
 }
 
@@ -65,9 +72,12 @@ void SonificationScheduler::startSonification(){
     std::cout << file_name << "\n";
     //(*videoSystem)->play();
     startTimerHz(60);
+    filterSynth.setFrequency(440);
+    filterSynth.setLevel(1.0f);
 }
 
 void SonificationScheduler::stopSonification(){
     frame = 0;
     stopTimer();
+    filterSynth.setLevel(0.0f);
 }

@@ -34,6 +34,8 @@ add_library( ${BINARY_NAME}
     "../../../Source/CSVLoader.h"
     "../../../Source/FileUtilities.cpp"
     "../../../Source/FileUtilities.h"
+    "../../../Source/FilterSynth1.cpp"
+    "../../../Source/FilterSynth1.h"
     "../../../Source/GUI.cpp"
     "../../../Source/GUI.h"
     "../../../Source/Main.cpp"
@@ -1397,6 +1399,7 @@ add_library( ${BINARY_NAME}
 
 set_source_files_properties("../../../Source/CSVLoader.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/FileUtilities.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties("../../../Source/FilterSynth1.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/GUI.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Perc0Sampler.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/SonificationScheduler.h" PROPERTIES HEADER_FILE_ONLY TRUE)

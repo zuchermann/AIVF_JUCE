@@ -19,9 +19,6 @@ Perc0Sampler::Perc0Sampler()
     formatManager.registerBasicFormats();
     
     //AudioDeviceManager();
-    audioDeviceManager.initialise(0, 2, nullptr, true);
-    
-    audioDeviceManager.addAudioCallback (&audioSourcePlayer);
     
     audioSourcePlayer.setSource (&transportSource);
     
@@ -35,6 +32,10 @@ Perc0Sampler::~Perc0Sampler()
 {
     transportSource  .setSource (nullptr);
     audioSourcePlayer.setSource (nullptr);
+}
+
+AudioSourcePlayer* Perc0Sampler::getSource(){
+    return &audioSourcePlayer;
 }
 
 const std::vector<String> Perc0Sampler::FILE_NAMES {"bass1_bip.aif", "bass2_bip.aif", "hand_drum1_bip.aif", "hand_drum2_bip.aif", "hand_drum3_bip.aif", "hand_drum4_bip.aif", "shake_bip.aif", "triangle_bip.aif"};

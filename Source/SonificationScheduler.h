@@ -10,6 +10,7 @@
 
 #pragma once
 
+#include "FilterSynth1.h"
 #include "Perc0Sampler.h"
 #include "CSVLoader.h"
 #include <JuceHeader.h>
@@ -28,8 +29,11 @@ private:
     CSVLoader loader;
     std::unique_ptr<VideoComponent> *videoSystem;
     Perc0Sampler sampler;
+    FilterSynth1 filterSynth;
     String file_name;
     int frame;
     double length;
     std::vector<int> t_events;
+    AudioDeviceManager audioDevice;
+    
 };

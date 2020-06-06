@@ -169,6 +169,10 @@
 			isa = PBXBuildFile;
 			fileRef = 73D28BF864570CEC4B049697;
 		};
+		87E9B8DD184287A20919EE1E = {
+			isa = PBXBuildFile;
+			fileRef = 23765575EE583021A214AA9D;
+		};
 		55AA6893C90AB9043E3A8F6C = {
 			isa = PBXBuildFile;
 			fileRef = 725B9F9F2C21A83E394D8E91;
@@ -290,6 +294,13 @@
 			path = "/Volumes/BIG_BOY/Applications/JUCE/modules/juce_audio_processors";
 			sourceTree = "<absolute>";
 		};
+		23765575EE583021A214AA9D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = FilterSynth2.cpp;
+			path = ../../Source/FilterSynth2.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
 		23AA65DBA75E7A6B7449440D = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -317,6 +328,13 @@
 			name = "juce_gui_extra";
 			path = "/Volumes/BIG_BOY/Applications/JUCE/modules/juce_gui_extra";
 			sourceTree = "<absolute>";
+		};
+		32BFC012CEC5F4C0267984DA = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = FilterSynth2.h;
+			path = ../../Source/FilterSynth2.h;
+			sourceTree = "SOURCE_ROOT";
 		};
 		33F65F37BC970A97AE5A23AE = {
 			isa = PBXFileReference;
@@ -824,6 +842,8 @@
 				A3EADE1A24E859B7557B1ED1,
 				73D28BF864570CEC4B049697,
 				383D968CDD82F9F5E17CF930,
+				23765575EE583021A214AA9D,
+				32BFC012CEC5F4C0267984DA,
 				725B9F9F2C21A83E394D8E91,
 				59F916A10DBE724DC5D412E5,
 				465CDED906D37124B8D1F5D5,
@@ -978,8 +998,8 @@
 					"_DEBUG=1",
 					"DEBUG=1",
 					"JUCER_XCODE_IPHONE_5BC26AE3=1",
-					"JUCE_APP_VERSION=1.0.0",
-					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_APP_VERSION=1.0.1",
+					"JUCE_APP_VERSION_HEX=0x10001",
 					"JucePlugin_Build_VST=0",
 					"JucePlugin_Build_VST3=0",
 					"JucePlugin_Build_AU=0",
@@ -1023,8 +1043,8 @@
 					"_NDEBUG=1",
 					"NDEBUG=1",
 					"JUCER_XCODE_IPHONE_5BC26AE3=1",
-					"JUCE_APP_VERSION=1.0.0",
-					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_APP_VERSION=1.0.1",
+					"JUCE_APP_VERSION_HEX=0x10001",
 					"JucePlugin_Build_VST=0",
 					"JucePlugin_Build_VST3=0",
 					"JucePlugin_Build_AU=0",
@@ -1209,6 +1229,7 @@
 				0871B4E66E91684ED02A18BD,
 				6AF21B1D5CE1FF0DC4F7E1D8,
 				F4F36BA56022A4363EB0482D,
+				87E9B8DD184287A20919EE1E,
 				55AA6893C90AB9043E3A8F6C,
 				2DE3A8C93416FA74B2D1A52A,
 				2FE2E215729B3395DA8EDA88,

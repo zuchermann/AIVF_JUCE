@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "FilterSynth1.h"
+#include "FilterSynth2.h"
 #include "Perc0Sampler.h"
 #include "CSVLoader.h"
 #include <JuceHeader.h>
@@ -22,6 +22,7 @@ public:
     void setVideoSystem(std::unique_ptr<VideoComponent> *videoSystem);
     void startSonification();
     void stopSonification();
+    void setSuccess(float succ);
     StringArray& getAllNames();
     void setId(String embryo_id);
 private:
@@ -29,7 +30,7 @@ private:
     CSVLoader loader;
     std::unique_ptr<VideoComponent> *videoSystem;
     Perc0Sampler sampler;
-    FilterSynth1 filterSynth;
+    FilterSynth2 filterSynth;
     String file_name;
     int frame;
     double length;

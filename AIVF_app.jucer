@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="CSTIn6" name="AIVF_app" projectType="guiapp" jucerVersion="5.4.7">
+<JUCERPROJECT id="CSTIn6" name="AIVF_app" projectType="guiapp" jucerVersion="5.4.7"
+              version="1.0.1">
   <MAINGROUP id="YIDkCi" name="AIVF_app">
     <GROUP id="{6422783E-31DE-8F25-BD20-1050D00C397F}" name="sample_vids">
       <FILE id="uO56ue" name="embryo_1996.mp4" compile="0" resource="0" file="../AIVF_Sonification/Local stuff/small_selection/embryo_1996.mp4"
@@ -68,6 +69,9 @@
       <FILE id="NFQ8kq" name="FilterSynth1.cpp" compile="1" resource="0"
             file="Source/FilterSynth1.cpp"/>
       <FILE id="PdgwIZ" name="FilterSynth1.h" compile="0" resource="0" file="Source/FilterSynth1.h"/>
+      <FILE id="AIJxYi" name="FilterSynth2.cpp" compile="1" resource="0"
+            file="Source/FilterSynth2.cpp"/>
+      <FILE id="jsuJcs" name="FilterSynth2.h" compile="0" resource="0" file="Source/FilterSynth2.h"/>
       <FILE id="lucLKH" name="GUI.cpp" compile="1" resource="0" file="Source/GUI.cpp"/>
       <FILE id="sdM0r4" name="GUI.h" compile="0" resource="0" file="Source/GUI.h"/>
       <FILE id="z2SrpA" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>

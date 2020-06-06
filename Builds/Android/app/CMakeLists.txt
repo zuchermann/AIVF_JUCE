@@ -8,7 +8,7 @@ SET(BINARY_NAME "juce_jni")
 add_library("cpufeatures" STATIC "${ANDROID_NDK}/sources/android/cpufeatures/cpu-features.c")
 set_source_files_properties("${ANDROID_NDK}/sources/android/cpufeatures/cpu-features.c" PROPERTIES COMPILE_FLAGS "-Wno-sign-conversion -Wno-gnu-statement-expression")
 
-add_definitions("-DJUCE_ANDROID=1" "-DJUCE_ANDROID_API_VERSION=16" "-DJUCE_PUSH_NOTIFICATIONS=1" "-DJUCE_PUSH_NOTIFICATIONS_ACTIVITY=\"com/rmsl/juce/JuceActivity\"" "-DJUCER_ANDROIDSTUDIO_7F0E4A25=1" "-DJUCE_APP_VERSION=1.0.0" "-DJUCE_APP_VERSION_HEX=0x10000")
+add_definitions("-DJUCE_ANDROID=1" "-DJUCE_ANDROID_API_VERSION=16" "-DJUCE_PUSH_NOTIFICATIONS=1" "-DJUCE_PUSH_NOTIFICATIONS_ACTIVITY=\"com/rmsl/juce/JuceActivity\"" "-DJUCER_ANDROIDSTUDIO_7F0E4A25=1" "-DJUCE_APP_VERSION=1.0.1" "-DJUCE_APP_VERSION_HEX=0x10001")
 
 include_directories( AFTER
     "../../../JuceLibraryCode"
@@ -36,6 +36,8 @@ add_library( ${BINARY_NAME}
     "../../../Source/FileUtilities.h"
     "../../../Source/FilterSynth1.cpp"
     "../../../Source/FilterSynth1.h"
+    "../../../Source/FilterSynth2.cpp"
+    "../../../Source/FilterSynth2.h"
     "../../../Source/GUI.cpp"
     "../../../Source/GUI.h"
     "../../../Source/Main.cpp"
@@ -1400,6 +1402,7 @@ add_library( ${BINARY_NAME}
 set_source_files_properties("../../../Source/CSVLoader.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/FileUtilities.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/FilterSynth1.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties("../../../Source/FilterSynth2.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/GUI.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Perc0Sampler.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/SonificationScheduler.h" PROPERTIES HEADER_FILE_ONLY TRUE)

@@ -38,6 +38,7 @@ GUI::GUI ()
 
     PlayButton.reset (new TextButton ("Play Button"));
     addAndMakeVisible (PlayButton.get());
+    PlayButton->setButtonText (TRANS("Play"));
     PlayButton->addListener (this);
 
     comboBox.reset (new ComboBox ("new combo box"));
@@ -51,6 +52,18 @@ GUI::GUI ()
     vid_component.reset (new VideoComponent (false));
     addAndMakeVisible (vid_component.get());
     vid_component->setName ("new component");
+
+    stopButton.reset (new TextButton ("stop button"));
+    addAndMakeVisible (stopButton.get());
+    stopButton->setButtonText (TRANS("Stop"));
+    stopButton->addListener (this);
+
+    success_slider.reset (new Slider ("success slider"));
+    addAndMakeVisible (success_slider.get());
+    success_slider->setRange (0, 1, 0);
+    success_slider->setSliderStyle (Slider::LinearHorizontal);
+    success_slider->setTextBoxStyle (Slider::TextBoxLeft, false, 80, 20);
+    success_slider->addListener (this);
 
 
     //[UserPreSize]
@@ -76,6 +89,8 @@ GUI::~GUI()
     PlayButton = nullptr;
     comboBox = nullptr;
     vid_component = nullptr;
+    stopButton = nullptr;
+    success_slider = nullptr;
 
 
     //[Destructor]. You can add your own custom destruction code here..
@@ -111,9 +126,11 @@ void GUI::resized()
     //[UserPreResize] Add your own custom resize code here..
     //[/UserPreResize]
 
-    PlayButton->setBounds (proportionOfWidth (0.5016f) - (120 / 2), 112, 120, 56);
+    PlayButton->setBounds (proportionOfWidth (0.3215f) - (56 / 2), 112, 56, 32);
     comboBox->setBounds (proportionOfWidth (0.5016f) - (176 / 2), 48, 176, 48);
     vid_component->setBounds (proportionOfWidth (0.5016f) - (proportionOfWidth (0.9003f) / 2), 208, proportionOfWidth (0.9003f), proportionOfHeight (0.5000f));
+    stopButton->setBounds (proportionOfWidth (0.6785f) - (56 / 2), 112, 56, 32);
+    success_slider->setBounds (proportionOfWidth (0.2508f), 160, proportionOfWidth (0.5016f), 24);
     //[UserResized] Add your own custom resize handling here..
     //[/UserResized]
 }
@@ -135,6 +152,12 @@ void GUI::buttonClicked (Button* buttonThatWasClicked)
         //loader.getTs(names.getReference(6));
         //[/UserButtonCode_PlayButton]
     }
+    else if (buttonThatWasClicked == stopButton.get())
+    {
+        //[UserButtonCode_stopButton] -- add your button handler code here..
+        sonificationScheduler.stopSonification();
+        //[/UserButtonCode_stopButton]
+    }
 
     //[UserbuttonClicked_Post]
     //[/UserbuttonClicked_Post]
@@ -154,6 +177,23 @@ void GUI::comboBoxChanged (ComboBox* comboBoxThatHasChanged)
 
     //[UsercomboBoxChanged_Post]
     //[/UsercomboBoxChanged_Post]
+}
+
+void GUI::sliderValueChanged (Slider* sliderThatWasMoved)
+{
+    //[UsersliderValueChanged_Pre]
+    //[/UsersliderValueChanged_Pre]
+
+    if (sliderThatWasMoved == success_slider.get())
+    {
+        //[UserSliderCode_success_slider] -- add your slider handling code here..
+        float success = (float) (success_slider->getValueObject()).getValue();
+        sonificationScheduler.setSuccess(success);
+        //[/UserSliderCode_success_slider]
+    }
+
+    //[UsersliderValueChanged_Post]
+    //[/UsersliderValueChanged_Post]
 }
 
 
@@ -181,15 +221,22 @@ BEGIN_JUCER_METADATA
           italic="0" justification="36"/>
   </BACKGROUND>
   <TEXTBUTTON name="Play Button" id="16df8ca7730936ee" memberName="PlayButton"
-              virtualName="" explicitFocusOrder="0" pos="50.161%c 112 120 56"
-              buttonText="Play Button" connectedEdges="0" needsCallback="1"
-              radioGroupId="0"/>
+              virtualName="" explicitFocusOrder="0" pos="32.154%c 112 56 32"
+              buttonText="Play" connectedEdges="0" needsCallback="1" radioGroupId="0"/>
   <COMBOBOX name="new combo box" id="4b23f54be60abb10" memberName="comboBox"
             virtualName="" explicitFocusOrder="0" pos="50.161%c 48 176 48"
             editable="1" layout="33" items="" textWhenNonSelected="" textWhenNoItems="(no choices)"/>
   <GENERICCOMPONENT name="new component" id="5ce758f777ff2e85" memberName="vid_component"
                     virtualName="" explicitFocusOrder="0" pos="50.161%c 208 90.032% 50%"
                     class="VideoComponent" params="false"/>
+  <TEXTBUTTON name="stop button" id="5640b04605143f74" memberName="stopButton"
+              virtualName="" explicitFocusOrder="0" pos="67.846%c 112 56 32"
+              buttonText="Stop" connectedEdges="0" needsCallback="1" radioGroupId="0"/>
+  <SLIDER name="success slider" id="582a88e85e8d7324" memberName="success_slider"
+          virtualName="" explicitFocusOrder="0" pos="25.08% 160 50.161% 24"
+          min="0.0" max="1.0" int="0.0" style="LinearHorizontal" textBoxPos="TextBoxLeft"
+          textBoxEditable="1" textBoxWidth="80" textBoxHeight="20" skewFactor="1.0"
+          needsCallback="1"/>
 </JUCER_COMPONENT>
 
 END_JUCER_METADATA

@@ -34,6 +34,7 @@ void SonificationScheduler::timerCallback() {
         int this_event = t_events[i];
         if (this_event == frame){
             sampler.playSample(i);
+            filterSynth.event(i);
         }
     }
     
@@ -64,6 +65,14 @@ StringArray& SonificationScheduler::getAllNames(){
     return loader.getNames();
 }
 
+void SonificationScheduler::setSuccess(float succ){
+    //std::cout << succ << "\n";
+    float inverse_succ = ((succ - 1.0) * -1.0);
+    filterSynth.setHarmDist(inverse_succ * .15f);
+    filterSynth.setNoise(0.5 + (succ * 0.5));
+    filterSynth.setClip((inverse_succ * 50.0) + 1.0);
+}
+
 void SonificationScheduler::startSonification(){
     frame = 0;
     length = (*videoSystem)->getVideoDuration();
@@ -72,12 +81,13 @@ void SonificationScheduler::startSonification(){
     std::cout << file_name << "\n";
     //(*videoSystem)->play();
     startTimerHz(60);
-    filterSynth.setFrequency(440);
-    filterSynth.setLevel(1.0f);
+    //filterSynth.setFrequency(440);
+    filterSynth.set_ts(t_events);
+    filterSynth.start();
 }
 
 void SonificationScheduler::stopSonification(){
     frame = 0;
     stopTimer();
-    filterSynth.setLevel(0.0f);
+    filterSynth.stop();
 }

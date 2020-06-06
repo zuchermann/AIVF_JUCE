@@ -37,7 +37,8 @@
 */
 class GUI  : public Component,
              public Button::Listener,
-             public ComboBox::Listener
+             public ComboBox::Listener,
+             public Slider::Listener
 {
 public:
     //==============================================================================
@@ -52,6 +53,7 @@ public:
     void resized() override;
     void buttonClicked (Button* buttonThatWasClicked) override;
     void comboBoxChanged (ComboBox* comboBoxThatHasChanged) override;
+    void sliderValueChanged (Slider* sliderThatWasMoved) override;
 
 
 
@@ -65,6 +67,8 @@ private:
     std::unique_ptr<TextButton> PlayButton;
     std::unique_ptr<ComboBox> comboBox;
     std::unique_ptr<VideoComponent> vid_component;
+    std::unique_ptr<TextButton> stopButton;
+    std::unique_ptr<Slider> success_slider;
 
 
     //==============================================================================

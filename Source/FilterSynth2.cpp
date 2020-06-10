@@ -114,8 +114,9 @@ forcedinline void FilterSynth2::updateAngle() noexcept
 void FilterSynth2::set_ts (std::vector<int> ts){
     int num_total = (int) filter_freqs.size();
     t_offset = ts[0] % num_total;
-    float freq_offset = 30.0f * (ts[2] % 10);
-    setFrequency(200.0f + freq_offset);
+    int pitch_offset = ts[2] % 12;
+    float freq = (float) MidiMessage::getMidiNoteInHertz(60 + pitch_offset);
+    setFrequency(freq);
     float Q_offset = 1.0 * (ts[4] % 9);
     Q = 1.0 + Q_offset;
     int num_freqs = (int) filter_freqs.size();

@@ -20,6 +20,7 @@ SonificationScheduler::SonificationScheduler(){
     //add all the sources
     audioDevice.addAudioCallback (sampler.getSource());
     audioDevice.addAudioCallback (filterSynth.getSource());
+    audioDevice.addAudioCallback (melody1.getSource());
     
     frame = 0;
 }
@@ -35,6 +36,7 @@ void SonificationScheduler::timerCallback() {
         if (this_event == frame){
             sampler.playSample(i);
             filterSynth.event(i);
+            melody1.event(i);
         }
     }
     
@@ -58,6 +60,7 @@ void SonificationScheduler::setId(String embryo_id){
     file_name = embryo_id;
     URL vid_file = URL(FileUtilities::getFromResources(embryo_id));
     auto print_done = [](auto& url, auto result) { std::cout << "loaded" << "n"; };
+    (*videoSystem)->closeVideo();
     (*videoSystem)->loadAsync(vid_file, print_done);
 }
 
@@ -71,6 +74,8 @@ void SonificationScheduler::setSuccess(float succ){
     filterSynth.setHarmDist(inverse_succ * .15f);
     filterSynth.setNoise(0.5 + (succ * 0.5));
     filterSynth.setClip((inverse_succ * 50.0) + 1.0);
+    
+    melody1.setSuccess(succ);
 }
 
 void SonificationScheduler::startSonification(){
@@ -83,6 +88,7 @@ void SonificationScheduler::startSonification(){
     startTimerHz(60);
     //filterSynth.setFrequency(440);
     filterSynth.set_ts(t_events);
+    melody1.set_ts(t_events);
     filterSynth.start();
 }
 

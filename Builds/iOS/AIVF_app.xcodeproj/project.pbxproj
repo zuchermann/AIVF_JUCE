@@ -181,6 +181,10 @@
 			isa = PBXBuildFile;
 			fileRef = 465CDED906D37124B8D1F5D5;
 		};
+		4368EFB8C7279C49FA0F8B56 = {
+			isa = PBXBuildFile;
+			fileRef = 434C5AB2DD76F0440900A05F;
+		};
 		2FE2E215729B3395DA8EDA88 = {
 			isa = PBXBuildFile;
 			fileRef = F1DD0E0AA8C66C0D6246CF1A;
@@ -385,6 +389,13 @@
 			path = ../../Source/CSVLoader.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		434C5AB2DD76F0440900A05F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Melody1.cpp;
+			path = ../../Source/Melody1.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
 		465CDED906D37124B8D1F5D5 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -496,6 +507,13 @@
 			name = CoreAudioKit.framework;
 			path = System/Library/Frameworks/CoreAudioKit.framework;
 			sourceTree = SDKROOT;
+		};
+		6C1B1FBB329F2B35867B826A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = Melody1.h;
+			path = ../../Source/Melody1.h;
+			sourceTree = "SOURCE_ROOT";
 		};
 		7074D932FAE06C858A792CF4 = {
 			isa = PBXFileReference;
@@ -847,6 +865,8 @@
 				725B9F9F2C21A83E394D8E91,
 				59F916A10DBE724DC5D412E5,
 				465CDED906D37124B8D1F5D5,
+				434C5AB2DD76F0440900A05F,
+				6C1B1FBB329F2B35867B826A,
 				F1DD0E0AA8C66C0D6246CF1A,
 				06F7113182A917C1DEF72E93,
 				8BB008B557CC4AE1AF183BDD,
@@ -1232,6 +1252,7 @@
 				87E9B8DD184287A20919EE1E,
 				55AA6893C90AB9043E3A8F6C,
 				2DE3A8C93416FA74B2D1A52A,
+				4368EFB8C7279C49FA0F8B56,
 				2FE2E215729B3395DA8EDA88,
 				DD2E4DC01E66C51B7DED8804,
 				B429238EF8C05C0ADFB6B00D,

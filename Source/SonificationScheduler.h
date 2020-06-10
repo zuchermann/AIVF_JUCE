@@ -11,6 +11,7 @@
 #pragma once
 
 #include "FilterSynth2.h"
+#include "Melody1.h"
 #include "Perc0Sampler.h"
 #include "CSVLoader.h"
 #include <JuceHeader.h>
@@ -31,6 +32,7 @@ private:
     std::unique_ptr<VideoComponent> *videoSystem;
     Perc0Sampler sampler;
     FilterSynth2 filterSynth;
+    Melody1 melody1;
     String file_name;
     int frame;
     double length;

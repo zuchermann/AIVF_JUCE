@@ -9,6 +9,7 @@
 */
 
 #include "Melody1.h"
+#include "MusicUtilities.h"
 
 Melody1::Melody1() {
     //filter_freqs = {1500.0f, 2000.0f, 300.0f, 3000.0f, 1000.0f, 200.0f, 500.0f, 1000.0f};
@@ -30,10 +31,11 @@ void Melody1::setSuccess(float success) {
 }
 
 void Melody1::event(int i){
-    std::vector<int> pitch_classes = {0, 2, 4, 1, 6, 3, 5, 7};
-    int pitch_class = pitch_classes[i];
+    std::vector<int> scale_degrees = {0, 2, 4, 1, 6, 3, 5, 7};
+    int pitch_class = MusicUtilities::major_degree_to_pitchclass(scale_degrees[i]);
+    int scale_degree = scale_degrees[i];
     std::vector<float> detune_dirs = {1.0f, -1.0f, -1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f};
-    float detune_dir = detune_dirs[pitch_class] * 3.0f;
+    float detune_dir = detune_dirs[scale_degree] * 1.0f;
     float this_pitch = (detune_dir * succ) + ((float) pitch_class) + ((float) base_pitch);
     //std::cout << this_pitch << "\n";
     float freq = midiToFreq(this_pitch);

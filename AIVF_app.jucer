@@ -77,6 +77,12 @@
       <FILE id="z2SrpA" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="Fz9Nga" name="Melody1.cpp" compile="1" resource="0" file="Source/Melody1.cpp"/>
       <FILE id="QRivSf" name="Melody1.h" compile="0" resource="0" file="Source/Melody1.h"/>
+      <FILE id="gEctO6" name="Melody2.cpp" compile="1" resource="0" file="Source/Melody2.cpp"/>
+      <FILE id="M0ivC6" name="Melody2.h" compile="0" resource="0" file="Source/Melody2.h"/>
+      <FILE id="JNrFhV" name="MusicUtilities.cpp" compile="1" resource="0"
+            file="Source/MusicUtilities.cpp"/>
+      <FILE id="Hw5eoU" name="MusicUtilities.h" compile="0" resource="0"
+            file="Source/MusicUtilities.h"/>
       <FILE id="sk3C8L" name="Perc0Sampler.cpp" compile="1" resource="0"
             file="Source/Perc0Sampler.cpp"/>
       <FILE id="oQpvih" name="Perc0Sampler.h" compile="0" resource="0" file="Source/Perc0Sampler.h"/>

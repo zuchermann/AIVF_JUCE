@@ -12,6 +12,7 @@
 
 #include "FilterSynth2.h"
 #include "Melody1.h"
+#include "Melody2.h"
 #include "Perc0Sampler.h"
 #include "CSVLoader.h"
 #include <JuceHeader.h>
@@ -33,6 +34,7 @@ private:
     Perc0Sampler sampler;
     FilterSynth2 filterSynth;
     Melody1 melody1;
+    Melody2 melody2;
     String file_name;
     int frame;
     double length;

@@ -43,6 +43,10 @@ add_library( ${BINARY_NAME}
     "../../../Source/Main.cpp"
     "../../../Source/Melody1.cpp"
     "../../../Source/Melody1.h"
+    "../../../Source/Melody2.cpp"
+    "../../../Source/Melody2.h"
+    "../../../Source/MusicUtilities.cpp"
+    "../../../Source/MusicUtilities.h"
     "../../../Source/Perc0Sampler.cpp"
     "../../../Source/Perc0Sampler.h"
     "../../../Source/SonificationScheduler.cpp"
@@ -1407,6 +1411,8 @@ set_source_files_properties("../../../Source/FilterSynth1.h" PROPERTIES HEADER_F
 set_source_files_properties("../../../Source/FilterSynth2.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/GUI.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Melody1.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties("../../../Source/Melody2.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties("../../../Source/MusicUtilities.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Perc0Sampler.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/SonificationScheduler.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../../../Applications/JUCE/modules/juce_audio_basics/audio_play_head/juce_AudioPlayHead.h" PROPERTIES HEADER_FILE_ONLY TRUE)

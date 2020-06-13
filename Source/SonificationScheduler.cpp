@@ -21,6 +21,7 @@ SonificationScheduler::SonificationScheduler(){
     audioDevice.addAudioCallback (sampler.getSource());
     audioDevice.addAudioCallback (filterSynth.getSource());
     audioDevice.addAudioCallback (melody1.getSource());
+    audioDevice.addAudioCallback (melody2.getSource());
     
     frame = 0;
 }
@@ -30,7 +31,7 @@ void SonificationScheduler::setVideoSystem(std::unique_ptr<VideoComponent> *vide
 }
 
 void SonificationScheduler::timerCallback() {
-    //run sonifications
+    //run t event based synthes
     for(int i = 0; i < t_events.size(); i ++){
         int this_event = t_events[i];
         if (this_event == frame){
@@ -39,6 +40,9 @@ void SonificationScheduler::timerCallback() {
             melody1.event(i);
         }
     }
+    
+    //run tick event based synths
+    melody2.tick(frame);
     
     //run video
     double video_position = frame / 1.0;
@@ -76,6 +80,7 @@ void SonificationScheduler::setSuccess(float succ){
     filterSynth.setClip((inverse_succ * 50.0) + 1.0);
     
     melody1.setSuccess(succ);
+    melody2.setSuccess(succ);
 }
 
 void SonificationScheduler::startSonification(){
@@ -87,8 +92,12 @@ void SonificationScheduler::startSonification(){
     //(*videoSystem)->play();
     startTimerHz(60);
     //filterSynth.setFrequency(440);
+    
+    //init synths here
     filterSynth.set_ts(t_events);
     melody1.set_ts(t_events);
+    melody2.set_ts(t_events, length);
+    
     filterSynth.start();
 }
 

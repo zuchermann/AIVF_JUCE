@@ -21,6 +21,7 @@ public:
     StringArray& getNames();
     StringArray& getEntry(String& entryName);
     std::vector<int> getTs(String& entryName);
+    int getSuccess(String& entryName);
     const static int NAME_COLUMN_INDEX = 1;
     
 private:

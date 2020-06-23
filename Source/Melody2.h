@@ -23,6 +23,7 @@ public:
     void tick (int i);
     void set_ts (std::vector<int> ts, double len);
     void start();
+    void generateMelody();
     void stop();
     float midiToFreq(float midi_val);
     forcedinline float getNextSample() noexcept;
@@ -40,6 +41,7 @@ private:
     std::vector<double> rhythm_error;
     std::vector<float> detune_dirs = {-1.0f, 1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f, -1.0f};
     AudioSourcePlayer audioSource;
+    std::vector<int> t_events;
     int next_to_play = 0;
     int base_pitch;
     double vid_length;

@@ -67,3 +67,11 @@ std::vector<int> CSVLoader::getTs(String& entryName){
     
     return result;
 }
+
+//returns 0 for failed embryo and 1 for successful embyo
+int CSVLoader::getSuccess(String& entryName){
+    String sucess_key = "beta_pregnancy_test";
+    StringArray& csvRow = getEntry(entryName);
+    String value = csvRow[data_labels.indexOf(sucess_key)];
+    return value.getIntValue();
+}

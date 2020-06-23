@@ -45,7 +45,96 @@ float Melody2::midiToFreq(float midi_val) {
 
 void Melody2::setSuccess(float success) {
     float adjusted_succ = (success - 1.0f) * -1.0f;
-    succ = adjusted_succ;
+    succ = adjusted_succ; //fail represented by 1, success by 0
+    generateMelody();
+    melody_events = std::vector<int>(lengths.size());
+    
+    //turn representation of rhythm in lengths vector into frame numbers
+    int num_events = (int) lengths.size();
+    //std::cout << num_events << " rhyth \n";
+    
+    double current_sum = 0.0;
+    for(int i = 0; i < num_events; i++){
+       int frame_i = (int) ((current_sum/beats_per_vid) * vid_length);
+       melody_events[i] = frame_i;
+       //std::cout << frame_i << "\n";
+       current_sum += lengths[i];
+    }
+}
+
+//generates unique melody for each emryo based on t events and success value.
+void Melody2::generateMelody() {
+    std::vector<float> strong_notes = {0,0,0,0,4,4,2,7};
+    std::vector<float> other_notes = {1,2,3,5,5,5,6,6,7};
+    std::vector<double> strong_times = std::vector<double>(beats_per_vid / 2);
+    for(int i = 0; i < beats_per_vid / 2; i++){
+        strong_times[i] = (double) i*2;
+    }
+    std::vector<float> used_notes = {};
+    std::vector<float> all_notes = {0,1,2,3,4,5,6,7};
+    
+    double currentLen = 0.;
+    int note_count = 0;
+    lengths = {};
+    pitches = {};
+    
+    while(currentLen < beats_per_vid){
+        int t_2 = t_events[(note_count) % t_events.size()];
+        int t_3 = t_events[(note_count + 1) % t_events.size()];
+        int t_4 = t_events[(note_count + 2) % t_events.size()];
+        int t_5 = t_events[(note_count + 3) % t_events.size()];
+        int t_6 = t_events[(note_count + 4) % t_events.size()];
+        int t_7 = t_events[(note_count + 5) % t_events.size()];
+        int t_8 = t_events[(note_count + 6) % t_events.size()];
+        int t_9 = t_events[(note_count + 7) % t_events.size()];
+        
+        //GENERATE NEXT NOTE...
+        
+        
+        //default note
+        int new_note = other_notes[(t_2 + t_3 + t_8) % other_notes.size()];
+        
+        //if strong beat for importantnote
+        if(std::find(strong_times.begin(), strong_times.end(), currentLen) != strong_times.end()){
+            //std::cout << "strong beat" << "\n";
+            float rand_0 = ((float) (t_events[t_4 + t_5 + t_9] % 10)) / 10.;
+            if(succ <= rand_0){
+                //std::cout << "doing a strong note fr" << "\n";
+                new_note = strong_notes[t_events[t_6 + t_7] % strong_notes.size()];
+            }
+        }
+        
+        //if first time note is used
+        if(!(std::find(used_notes.begin(), used_notes.end(), new_note) != used_notes.end())){
+            used_notes.push_back(new_note);
+            std::cout << "note " << new_note << " used. " << used_notes.size() << " notes used." <<"\n";
+        }
+        
+        pitches.push_back(new_note);
+        
+        //*************************************************
+        //GENERATE NEXT NOTE RHYTHM
+        
+        int quant_succ = (int)(succ * 5.);
+        double hop_size = pow(0.5, ((double)(2 + quant_succ)));
+        double mult = (1./hop_size);
+        double rhythm = hop_size + (((t_2+t_9+t_8*t_9) % (int) mult) * hop_size);
+        
+        if ((currentLen != floor(currentLen)) and (floor(currentLen + rhythm) > floor(currentLen))){
+            if ((t_2 % 10) >= (succ * 10)){
+                rhythm = floor(currentLen + rhythm) - currentLen;
+            }
+        }
+            
+        double next_rhythm = rhythm;
+        
+        //std::cout << pitches.size() << " rhyth \n";
+        
+        lengths.push_back(next_rhythm);
+        currentLen += next_rhythm;
+        note_count += 1;
+        
+    }
 }
 
 void Melody2::tick(int i){
@@ -130,20 +219,11 @@ forcedinline void Melody2::updateEnv() noexcept {
 void Melody2::set_ts (std::vector<int> ts, double len){
     //int num_total = (int) filter_freqs.size();
     //t_offset = ts[0] % num_total;
+    t_events = ts;
     vid_length = len;
     base_pitch = 72 + ts[2] % 12;
     next_to_play = 0;
     //std::cout << vid_length << "LENGTH \n";
-    
-    //turn representation of rhythm in lengths vector into frame numbers
-    int num_events = (int) lengths.size();
-    double current_sum = 0.0;
-    for(int i = 0; i < num_events; i++){
-        int frame_i = (int) ((current_sum/beats_per_vid) * vid_length);
-        melody_events[i] = frame_i;
-        //std::cout << frame_i << "\n";
-        current_sum += lengths[i];
-    }
     
 }
 

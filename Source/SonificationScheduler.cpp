@@ -63,9 +63,19 @@ void SonificationScheduler::setId(String embryo_id){
     stopSonification();
     file_name = embryo_id;
     URL vid_file = URL(FileUtilities::getFromResources(embryo_id));
-    auto print_done = [](auto& url, auto result) { std::cout << "loaded" << "n"; };
+    auto video_loaded = [this](auto& url, auto result) {
+        length = (*videoSystem)->getVideoDuration();
+        t_events = loader.getTs(file_name);
+        
+        //init synths here
+        filterSynth.set_ts(t_events);
+        melody1.set_ts(t_events);
+        melody2.set_ts(t_events, length);
+        setSuccess(loader.getSuccess(file_name));
+    };
+    
     (*videoSystem)->closeVideo();
-    (*videoSystem)->loadAsync(vid_file, print_done);
+    (*videoSystem)->loadAsync(vid_file, video_loaded);
 }
 
 StringArray& SonificationScheduler::getAllNames(){
@@ -85,18 +95,11 @@ void SonificationScheduler::setSuccess(float succ){
 
 void SonificationScheduler::startSonification(){
     frame = 0;
-    length = (*videoSystem)->getVideoDuration();
     (*videoSystem)->setPlaySpeed(0);
-    t_events = loader.getTs(file_name);
     std::cout << file_name << "\n";
     //(*videoSystem)->play();
     startTimerHz(60);
     //filterSynth.setFrequency(440);
-    
-    //init synths here
-    filterSynth.set_ts(t_events);
-    melody1.set_ts(t_events);
-    melody2.set_ts(t_events, length);
     
     filterSynth.start();
 }

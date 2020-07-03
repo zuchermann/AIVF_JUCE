@@ -22,6 +22,7 @@ SonificationScheduler::SonificationScheduler(){
     audioDevice.addAudioCallback (filterSynth.getSource());
     audioDevice.addAudioCallback (melody1.getSource());
     audioDevice.addAudioCallback (melody2.getSource());
+    audioDevice.addAudioCallback (rhythm1.getSource());
     
     frame = 0;
 }
@@ -43,6 +44,7 @@ void SonificationScheduler::timerCallback() {
     
     //run tick event based synths
     melody2.tick(frame);
+    rhythm1.tick(frame);
     
     //run video
     double video_position = frame / 1.0;
@@ -71,6 +73,7 @@ void SonificationScheduler::setId(String embryo_id){
         filterSynth.set_ts(t_events);
         melody1.set_ts(t_events);
         melody2.set_ts(t_events, length);
+        rhythm1.set_ts(t_events, length/videoSpeed);
         setSuccess(loader.getSuccess(file_name));
     };
     
@@ -98,14 +101,19 @@ void SonificationScheduler::startSonification(){
     (*videoSystem)->setPlaySpeed(0);
     std::cout << file_name << "\n";
     //(*videoSystem)->play();
-    startTimerHz(60);
+    startTimerHz(videoSpeed);
     //filterSynth.setFrequency(440);
     
+    //start synths that keep playing throughout
     filterSynth.start();
+    rhythm1.start();
 }
 
 void SonificationScheduler::stopSonification(){
     frame = 0;
     stopTimer();
+    
+    //stop synths that need to be stopped
     filterSynth.stop();
+    rhythm1.stop();
 }

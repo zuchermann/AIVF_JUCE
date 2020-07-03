@@ -49,6 +49,8 @@ add_library( ${BINARY_NAME}
     "../../../Source/MusicUtilities.h"
     "../../../Source/Perc0Sampler.cpp"
     "../../../Source/Perc0Sampler.h"
+    "../../../Source/Rhythm1.cpp"
+    "../../../Source/Rhythm1.h"
     "../../../Source/SonificationScheduler.cpp"
     "../../../Source/SonificationScheduler.h"
     "../../../../../Applications/JUCE/modules/juce_audio_basics/audio_play_head/juce_AudioPlayHead.h"
@@ -1414,6 +1416,7 @@ set_source_files_properties("../../../Source/Melody1.h" PROPERTIES HEADER_FILE_O
 set_source_files_properties("../../../Source/Melody2.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/MusicUtilities.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Perc0Sampler.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties("../../../Source/Rhythm1.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/SonificationScheduler.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../../../Applications/JUCE/modules/juce_audio_basics/audio_play_head/juce_AudioPlayHead.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../../../Applications/JUCE/modules/juce_audio_basics/buffers/juce_AudioChannelSet.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)

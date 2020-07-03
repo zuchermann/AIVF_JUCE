@@ -178,6 +178,7 @@ void Melody2::setFrequency (float frequency)
 
 AudioSourcePlayer* Melody2::getSource() {
     audioSource.setSource(this);
+    //audioSource.setGain(.01);
     return &audioSource;
 }
 
@@ -237,7 +238,7 @@ void Melody2::getNextAudioBlock (const AudioSourceChannelInfo& bufferToFill)
     
     for (auto sample = 0; sample < bufferToFill.numSamples; ++sample)
     {
-        auto levelSample = getNextSample();       // [9]
+        auto levelSample = getNextSample() * level;       // [9]
         
         leftBuffer[sample]  += levelSample;                           // [10]
         rightBuffer[sample] += levelSample;

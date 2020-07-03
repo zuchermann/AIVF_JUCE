@@ -114,7 +114,7 @@ void Melody1::getNextAudioBlock (const AudioSourceChannelInfo& bufferToFill)
     
     for (auto sample = 0; sample < bufferToFill.numSamples; ++sample)
     {
-        auto levelSample = getNextSample();       // [9]
+        auto levelSample = getNextSample() * level;       // [9]
         
         leftBuffer[sample]  += levelSample;                           // [10]
         rightBuffer[sample] += levelSample;

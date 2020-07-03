@@ -124,7 +124,7 @@ void FilterSynth2::set_ts (std::vector<int> ts){
 }
 
 void FilterSynth2::start(){
-    setLevel(0.5f);
+    setLevel(0.3f);
 }
 
 void FilterSynth2::stop(){

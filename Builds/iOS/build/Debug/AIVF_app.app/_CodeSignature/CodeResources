@@ -52,6 +52,10 @@
 		<data>
 		W4a/jTl58Xwxkb8Qbq4JyAZtFjQ=
 		</data>
+		<key>DARBUKA.wav</key>
+		<data>
+		aUnfSHNAnCgsgmoIhaVtpYdnwzQ=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		zlichTizIK1iMftX6zqNVzNNlD0=
@@ -289,6 +293,17 @@
 			<key>hash2</key>
 			<data>
 			JeyeOOd2HPDfJa1nCOQvYxyFGjmvO7+XLuxbuO0SkpE=
+			</data>
+		</dict>
+		<key>DARBUKA.wav</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aUnfSHNAnCgsgmoIhaVtpYdnwzQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			BNRzDFxGJeS32PW7SBsD4IP3HfsAMe/rMP8Pw5Olnxc=
 			</data>
 		</dict>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>

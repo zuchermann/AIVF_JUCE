@@ -3,6 +3,10 @@
 <JUCERPROJECT id="CSTIn6" name="AIVF_app" projectType="guiapp" jucerVersion="5.4.7"
               version="1.0.1">
   <MAINGROUP id="YIDkCi" name="AIVF_app">
+    <GROUP id="{F70568A7-240A-51BF-6F73-943D97819F09}" name="loops">
+      <FILE id="LWOgyI" name="DARBUKA.wav" compile="0" resource="0" file="../AIVF_Sonification/aivf_sonification_dev/dev/DARBUKA.wav"
+            xcodeResource="1"/>
+    </GROUP>
     <GROUP id="{6422783E-31DE-8F25-BD20-1050D00C397F}" name="sample_vids">
       <FILE id="uO56ue" name="embryo_1996.mp4" compile="0" resource="0" file="../AIVF_Sonification/Local stuff/small_selection/embryo_1996.mp4"
             xcodeResource="1"/>
@@ -86,6 +90,8 @@
       <FILE id="sk3C8L" name="Perc0Sampler.cpp" compile="1" resource="0"
             file="Source/Perc0Sampler.cpp"/>
       <FILE id="oQpvih" name="Perc0Sampler.h" compile="0" resource="0" file="Source/Perc0Sampler.h"/>
+      <FILE id="yplhyI" name="Rhythm1.cpp" compile="1" resource="0" file="Source/Rhythm1.cpp"/>
+      <FILE id="kOjGyo" name="Rhythm1.h" compile="0" resource="0" file="Source/Rhythm1.h"/>
       <FILE id="J7NoZq" name="SonificationScheduler.cpp" compile="1" resource="0"
             file="Source/SonificationScheduler.cpp"/>
       <FILE id="BXGOB1" name="SonificationScheduler.h" compile="0" resource="0"

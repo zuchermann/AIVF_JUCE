@@ -79,6 +79,6 @@ void Perc0Sampler::playSample(int samp_idx)
     //audioDeviceManager.playTestSound();
     //std::cout << String(transportSource.getLengthInSeconds()) << "\n";
     loadURLIntoTransport(FileUtilities::getFromResources(FILE_NAMES[samp_idx]));
-    transportSource.setPosition (0);
+    transportSource.setPosition(0);
     transportSource.start();
 }

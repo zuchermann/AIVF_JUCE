@@ -81,6 +81,10 @@
 			isa = PBXBuildFile;
 			fileRef = C770FD9E13055D6C13C6E0BB;
 		};
+		A5EC6D027427C81D9C635E74 = {
+			isa = PBXBuildFile;
+			fileRef = 061F5D79AE8437EE69050491;
+		};
 		F66E4F3CC2AAE0F5A7866C5E = {
 			isa = PBXBuildFile;
 			fileRef = 4EC58A1C795CD2687E469DF4;
@@ -197,6 +201,10 @@
 			isa = PBXBuildFile;
 			fileRef = F1DD0E0AA8C66C0D6246CF1A;
 		};
+		3CF266EE2000F5EDDB8A48FF = {
+			isa = PBXBuildFile;
+			fileRef = 0335BCB5B26127C6DFB4F95B;
+		};
 		DD2E4DC01E66C51B7DED8804 = {
 			isa = PBXBuildFile;
 			fileRef = 8BB008B557CC4AE1AF183BDD;
@@ -276,6 +284,20 @@
 			lastKnownFileType = sourcecode.cpp.objcpp;
 			name = "include_juce_gui_extra.mm";
 			path = "../../JuceLibraryCode/include_juce_gui_extra.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		0335BCB5B26127C6DFB4F95B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Rhythm1.cpp;
+			path = ../../Source/Rhythm1.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		061F5D79AE8437EE69050491 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = DARBUKA.wav;
+			path = "../../../AIVF_Sonification/aivf_sonification_dev/dev/DARBUKA.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		06F7113182A917C1DEF72E93 = {
@@ -817,6 +839,13 @@
 			path = "../../JuceLibraryCode/include_juce_audio_devices.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
+		E20C610EFCA06C5B75449D60 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = Rhythm1.h;
+			path = ../../Source/Rhythm1.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		E33400B9D4705B10EA310B5B = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
@@ -909,6 +938,8 @@
 				1BA06AECFBBFB1F96C82FD06,
 				F1DD0E0AA8C66C0D6246CF1A,
 				06F7113182A917C1DEF72E93,
+				0335BCB5B26127C6DFB4F95B,
+				E20C610EFCA06C5B75449D60,
 				8BB008B557CC4AE1AF183BDD,
 				23AA65DBA75E7A6B7449440D,
 			);
@@ -973,6 +1004,7 @@
 				71D5015C0C0402245B79F937,
 				B7D801C8CFADCC0DDAAAF2EC,
 				C770FD9E13055D6C13C6E0BB,
+				061F5D79AE8437EE69050491,
 				4EC58A1C795CD2687E469DF4,
 				C1E0ED5F36974E0DFE267D61,
 				0EC13944CDD95DB456DC5E4E,
@@ -1260,6 +1292,7 @@
 			files = (
 				39D27C866D47D2CF745CFCFA,
 				251C6F3B5A5670453136098F,
+				A5EC6D027427C81D9C635E74,
 				F66E4F3CC2AAE0F5A7866C5E,
 				EFABBDDC465F740F57AE94F9,
 				E717665979BCB627709B594E,
@@ -1296,6 +1329,7 @@
 				B56D1598AE5C82B9C482D3C6,
 				AD8AB1F119ADEE682102A318,
 				2FE2E215729B3395DA8EDA88,
+				3CF266EE2000F5EDDB8A48FF,
 				DD2E4DC01E66C51B7DED8804,
 				B429238EF8C05C0ADFB6B00D,
 				28ED436EE416A249052D8156,

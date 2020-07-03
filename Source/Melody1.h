@@ -32,7 +32,7 @@ public:
     AudioSourcePlayer* getSource();
 private:
     float twoPi = MathConstants<float>::twoPi;
-    float currentAngle = 0.0f, angleDelta = 0.0f, level = 0.0f;
+    float currentAngle = 0.0f, angleDelta = 0.0f, level = 0.4f;
     float env_freq = 2.0f, env = 0.0f, env_delta = 0.0f; //filter period of .5 seconds
     AudioSourcePlayer audioSource;
     int base_pitch;
